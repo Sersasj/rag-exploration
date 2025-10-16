@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-exploration"
+version = "0.1.0"
+description = "Leaning RAG"
+authors = [
+    {name = "Sergio Alvarez Name", email = ""}
+]
+readme = "readme.MD"
+requires-python = ">=3.8"
+dependencies = [
+    "langchain",
+    "langchain-community",
+    "ollama",
+    "tiktoken",
+    "langchain_ollama",
+    "langchainhub",
+    "chromadb",
+    "langchain-docling"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["class_1_to_4*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
